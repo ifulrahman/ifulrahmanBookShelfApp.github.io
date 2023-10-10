@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Bookshelf Apps</title>
+      <!-- font awesome icon -->
+      <script src="https://kit.fontawesome.com/d66a7a980c.js" crossorigin="anonymous"></script>
+      <!-- css -->
+      <link rel="stylesheet" href="style/style.css" />
+   </head>
+   <body>
+      <header class="head_bar">
+         <h1 class="head_bar_title">Bookshelf Apps</h1>
+         <i class="fa-solid fa-book-open-reader fa-2x"></i>
+      </header>
+      <main>
+         <section class="input_section">
+            <h2>Masukkan Buku Baru !</h2>
+            <form id="inputBook">
+               <div class="input">
+                  <label for="inputBookTitle">Judul</label>
+                  <input id="inputBookTitle" type="text" placeholder="masukkan judul buku" />
+               </div>
+               <div class="input">
+                  <label for="inputBookAuthor">Penulis</label>
+                  <input id="inputBookAuthor" type="text" placeholder="masukkan nama penulis" />
+               </div>
+               <div class="input">
+                  <label for="inputBookYear">Tahun Terbit</label>
+                  <input id="inputBookYear" type="number" min="1990" value="2022" placeholder="masukkan tahun terbit" />
+               </div>
+               <div class="input_inline">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox" />
+               </div>
+               <button id="bookSubmit" type="submit" class="btn-brown">Tambahkan Buku</button>
+            </form>
+         </section>
+
+         <section class="search_section">
+            <h2>Cari Buku Sesuai Judul</h2>
+            <form id="searchBook">
+               <label for="searchBookTitle">Judul</label>
+               <input id="searchBookTitle" type="text" placeholder="masukkan judul buku" />
+               <button id="searchSubmit" type="submit" class="btn-brown"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+            </form>
+         </section>
+
+         <section class="book_shelf_container">
+            <button id="resetRak" class="btn-red" onclick="resetRak()"><i class="fa-solid fa-trash"></i> Hapus Semua</button>
+            <div class="book_shelf book_read">
+               <h2>Buku yang belum selesai dibaca :</h2>
+               <div id="incompleteBookshelfList" class="book_list">
+                  <!-- element is the result of the showBook function -->
+               </div>
+            </div>
+
+            <div class="book_shelf">
+               <h2>Buku yang selesai dibaca :</h2>
+               <div id="completeBookshelfList" class="book_list">
+                  <!-- element is the result of the showBook function -->
+               </div>
+            </div>
+         </section>
+         <section class="input_section input_edit_section">
+            <form id="editData">
+               <div class="input">
+                  <label for="inputEditTitle">Judul</label>
+                  <input id="inputEditTitle" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="inputEditAuthor">Penulis</label>
+                  <input id="inputEditAuthor" type="text" required />
+               </div>
+               <div class="input">
+                  <label for="inputEditYear">Tahun Terbit</label>
+                  <input id="inputEditYear" type="number" value="2022" required />
+               </div>
+               <button id="bookEditCancel">Batal</button>
+               <button id="bookEditSubmit" type="submit" class="btn-brown">Simpan</button>
+            </form>
+         </section>
+      </main>
+      <footer>
+         <div class="social-media">
+            <a href="https://github.com/ifulrahman" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="https://www.instagram.com/iful_rahman/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.youtube.com/@muhammadsyaifulrahman1224/featured" target="_blank"><i class="fa-brands fa-youtube fa-xl"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-syaiful-rahman-716069235/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+         </div>
+         &copy; 2023 <strong><span>Muhammad Syaiful Rahman</span></strong>. All Rights Reserved
+      </footer>
+
+      <!-- sweetalert cdn -->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>
